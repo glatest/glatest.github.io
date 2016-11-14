@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NYE 2016 Phase 2B</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+		}
+		div.container{
+			width: 656px;
+			margin: 40px auto 0 auto;
+		}
+		div.controls{
+			margin: 40px auto 0 auto;
+			text-align: center;
+		}
+		div.button{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+			letter-spacing: 1px;
+			color: #ffffff;
+			padding: 8px;
+			background-color: #353d42;
+			display: inline;
+			margin-left: 5px;
+			cursor: pointer;
+		}
+		#phone{
+			display: none;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+</head>
+<body>
+	<!-- GIFs -->
+	<div class="container">
+		<img id="tv" src="2B_Website_TV.gif" width="656" height="328">
+		<img id="phone" src="2B_Website_360.gif" width="656" height="328">
+	</div>
+	<!-- Buttons -->
+	<div class="controls">
+		<div class="button tv">TV</div>
+		<div class="button phone">360</div>
+	</div>
+	<!-- Scripts -->
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var $img = $('img');
+
+			$(".tv").click(function(){
+				$("#tv").show();
+				setTimeout(function() {
+					$img.attr('src', '2B_Website_TV.gif');
+				}, 0);
+				$("#phone").hide();
+			});
+
+			$(".phone").click(function(){
+				$("#tv").hide();
+				$("#phone").show();
+				setTimeout(function() {
+					$img.attr('src', '2B_Website_360.gif');
+				}, 0);
+			});
+
+		});
+	</script>
+</body>
+</html>
