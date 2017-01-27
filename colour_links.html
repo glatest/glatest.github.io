@@ -10,7 +10,11 @@
 			width: 480px;
 			margin: 40px auto;
 			background-color: #f5f5f5;
-			padding: 40px;
+			padding: 16px;
+		}
+		.contentarea{
+			background-color: #ffffff;
+			padding: 20px;
 		}
 		p{
 			font-family: Arial;
@@ -27,16 +31,17 @@
 			display: block;
 			padding-bottom: 10px;
 		}
-		.test{
-			padding: 40px;
+		#grey{
+			padding-top: 20px;
+			padding-bottom: 20px;
 			border-bottom: 1px solid #e5e5e5;
 		}
 		#black{
-			padding: 0 40px 40px 40px;
+			padding-bottom: 20px;
+			border-bottom: 1px solid #e5e5e5;
 		}
 		#shade{
-			border-bottom: none;
-			padding: 40px 40px 0 40px;
+			padding-top: 20px;
 		}
 
 		a.def{
@@ -105,23 +110,25 @@
 </head>
 <body>
 	<section class="container">
-		<div class="test" id="black">
-			<p>Rollover as black:</p>
-			<a class="mol" href="#">This is a Mayor of London link</a>
-			<a class="la" href="#">This is a London Assembly link</a>
-			<a class="def" href="#">This is a default content link</a>
-		</div>
-		<div class="test" id="grey">
-			<p>Rollover as core grey:</p>
-			<a class="mol" href="#">This is a Mayor of London link</a>
-			<a class="la" href="#">This is a London Assembly link</a>
-			<a class="def" href="#">This is a default content link</a>
-		</div>
-		<div class="test" id="shade">
-			<p>Rollover as a shade:</p>
-			<a class="mol" href="#">This is a Mayor of London link</a>
-			<a class="la" href="#">This is a London Assembly link</a>
-			<a class="def" href="#">This is a default content link</a>
+		<div class="contentarea">
+			<div class="test" id="black">
+				<p>Rollover as black:</p>
+				<a class="mol" href="#">This is a Mayor of London link</a>
+				<a class="la" href="#">This is a London Assembly link</a>
+				<a class="def" href="#">This is a default content link</a>
+			</div>
+			<div class="test" id="grey">
+				<p>Rollover as core grey:</p>
+				<a class="mol" href="#">This is a Mayor of London link</a>
+				<a class="la" href="#">This is a London Assembly link</a>
+				<a class="def" href="#">This is a default content link</a>
+			</div>
+			<div class="test" id="shade">
+				<p>Rollover as a shade:</p>
+				<a class="mol" href="#">This is a Mayor of London link</a>
+				<a class="la" href="#">This is a London Assembly link</a>
+				<a class="def" href="#">This is a default content link</a>
+			</div>
 		</div>
 	</section>
 </body>
