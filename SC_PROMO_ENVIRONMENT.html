@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Environment Strategy Promo</title>
+	<style type="text/css">
+		body{
+			width: 100%;
+		}
+		div.container{
+			width: 500px;
+			height: 500px;
+			margin: 40px auto 0 auto;
+			box-shadow: 0 0 5px rgba(0,0,0,0.2);
+			z-index: 100;
+		}
+		div.safe-button{
+			margin: 40px auto 0 auto;
+			text-align: center;
+		}
+		.on, 
+		.off{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 10px;
+			letter-spacing: 1px;
+			color: #ffffff;
+			padding: 8px;
+			background-color: #ee266d;
+			display: inline;
+			margin-left: 5px;
+			cursor: pointer;
+		}
+		.safe{
+			position: absolute;
+		}
+		#safe{
+			display: none;
+			z-index: 200;
+		}
+	</style>
+</head>
+<body>
+	<!-- GIFs -->
+	<div class="container">
+		<img class="safe" id="safe" src="safe_area.png" width="500" height="500">
+		<img class="gifs" id="one" src="SC_PROMO_ENVIRONMENT_1000x1000_FA.gif" width="500" height="500">
+	</div>
+	<!-- Buttons -->
+	<div class="safe-button">
+		<div class="on">Safe area on</div>
+		<div class="off">Safe area off</div>
+	</div>
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+// SAFE AREA BUTTON
+
+			$(".on").click(function(){
+				$("#safe").show();
+				setTimeout(function() {
+					$('.safe').attr('src', 'safe_area.png');
+				}, 0);
+				console.log('safe area on');
+			});
+
+			$(".off").click(function(){
+				$("#safe").hide();
+				console.log('safe area off');
+			});
+
+		});
+	</script>
+</body>
+</html>
