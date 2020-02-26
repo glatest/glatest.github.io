@@ -7,8 +7,8 @@
 			width: 100%;
 		}
 		div.container{
-			width: 500px;
-			height: 500px;
+			width: 360px;
+			height: 640px;
 			margin: 40px auto 0 auto;
 			/*box-shadow: 0 0 5px rgba(0,0,0,0.2);*/
 			z-index: 100;
@@ -37,8 +37,8 @@
 <body>
 	<!-- GIFs -->
 	<div class="container">
-		<img class="gifs" id="one" src="ULEZ_Stat_1200x1200.gif" width="500" height="500">
-		<img class="gifs" id="two" src="AQ_Stat_1200x1200.gif" width="500" height="500">
+		<img class="gifs" id="one" src="ULEZ_Stat_1080x1920.gif" width="360" height="640">
+		<img class="gifs" id="two" src="AQ_Stat_1080x1920.gif" width="360" height="640">
 	</div>
 	<!-- Buttons -->
 	<div class="controls">
@@ -54,7 +54,7 @@
 			$(".one").click(function(){
 				$("#one").show();
 				setTimeout(function() {
-					$('.gifs').attr('src', 'ULEZ_Stat_1200x1200.gif');
+					$('.gifs').attr('src', 'ULEZ_Stat_1080x1920.gif');
 				}, 0);
 				$("#two").hide();
 			});
@@ -62,7 +62,7 @@
 			$(".two").click(function(){
 				$("#two").show();
 				setTimeout(function() {
-					$('.gifs').attr('src', 'AQ_Stat_1200x1200.gif');
+					$('.gifs').attr('src', 'AQ_Stat_1080x1920.gif');
 				}, 0);
 				$("#one").hide();
 			});
