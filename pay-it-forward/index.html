@@ -7,20 +7,75 @@
 			width: 100%;
 		}
 		div.container{
-			width: 500px;
-			height: 500px;
+			width: 640px;
+			height: 640px;
 			margin: 40px auto 0 auto;
 			/*box-shadow: 0 0 5px rgba(0,0,0,0.2);*/
 			z-index: 100;
 		}
+		div.controls{
+			margin: 40px auto 0 auto;
+			text-align: center;
+		}
+		div.button{
+			font-family: Arial, Helvetica, sans-serif;
+			font-size: 14px;
+			font-weight: bold;
+			letter-spacing: 1px;
+			color: #FFFFFF;
+			padding: 8px 16px;
+			background-color: #353D42;
+			display: inline;
+			margin-left: 5px;
+			cursor: pointer;
+			border-radius: 2px;
+		}
+		div.button:hover{
+			background-color: #000000;
+		}
+		div.button:active{
+			background-color: #868B8E;
+		}
+		#two{
+			display: none;
+			width: 100%;
+		}
 	</style>
 </head>
 <body>
+	<!-- Buttons -->
+	<div class="controls">
+		<div class="button one">1200x1200</div>
+		<div class="button two">1280x720</div>
+	</div>
 	<!-- GIFs -->
 	<div class="container">
-		<video width="500" height="500" controls autoplay loop muted>
-			<source src="PIF_Social_1200x1200_01.mp4" type="video/mp4">
-		</video>
+		<video id="one" width="640" height="640" controls autoplay loop muted><source class="vids" src="PIF_Social_1200x1200_FA.mp4" type="video/mp4"></video>
+		<video id="two" width="640" height="360" controls autoplay loop muted><source class="vids" src="PIF_Social_1280x720_FA.mp4" type="video/mp4"></video>
 	</div>
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var $video = $('video');
+
+			$(".one").click(function(){
+				$("#one").show();
+				setTimeout(function() {
+					$('.vids').attr('src', 'PIF_Social_1200x1200_FA.mp4');
+				}, 0);
+				$("#two").hide();
+			});
+
+			$(".two").click(function(){
+				$("#two").show();
+				setTimeout(function() {
+					$('.vids').attr('src', 'PIF_Social_1280x720_FA.mp4');
+				}, 0);
+				$("#one").hide();
+			});
+
+		});
+	</script>
 </body>
 </html>
